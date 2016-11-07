@@ -33,7 +33,7 @@ public class FTPFileDownloader {
 
 			// APPROACH #1: using retrieveFile(String, OutputStream)
 			String remoteFile1 = "/shapefiles/fop/FLOODOUTLOOK_latest.zip";
-			File downloadFile1 = new File("C:/testzip/FLOODOUTLOOK_latest.zip");
+			File downloadFile1 = new File("C:/FLOODOUTLOOK_latest.zip");
 			OutputStream outputStream1 = new BufferedOutputStream(new FileOutputStream(downloadFile1));
 			boolean success = ftpClient.retrieveFile(remoteFile1, outputStream1);
 			outputStream1.close();
