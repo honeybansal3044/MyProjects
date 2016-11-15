@@ -13,7 +13,7 @@ import java.io.IOException;
 public class Test {
 
 	public static void main(String[] args) throws IOException {
-		main2();
+		main1();
 
 	}
 	
@@ -22,8 +22,8 @@ public class Test {
 		FileOutputStream out = null;
 
 		try {
-			in = new FileInputStream("input.txt");
-			out = new FileOutputStream("output.txt");
+			in = new FileInputStream(".\\data\\input.txt");
+			out = new FileOutputStream(".\\data\\output.txt");
 
 			int c;
 			while((c = in.read()) != -1) {
@@ -51,8 +51,8 @@ public class Test {
 	      FileReader in = null;
 	      FileWriter out = null;
 	      try {
-	         in = new FileReader("input.txt");
-	         out = new FileWriter("output.txt");
+	         in = new FileReader(".\\data\\input.txt");
+	         out = new FileWriter(".\\data\\output.txt");
 	         
 	         int c;
 	         while ((c = in.read()) != -1) {

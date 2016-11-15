@@ -1,1 +1,1 @@
-https://www.tutorialspoint.com/spring/spring_ioc_containers.htm
+https://www.tutorialspoint.com/spring/spring_bean_scopes.htm
