@@ -15,8 +15,13 @@ public class MainApp2 {
 			HelloWorld obj = (HelloWorld) context.getBean("helloWorld");
 			obj.getMessage();
 			obj.setMessage("Hello Again Scope Test!");
-			HelloWorld obj2 = (HelloWorld) context.getBean("helloWorld");
+
+			HelloWorld obj1 = (HelloWorld) context.getBean("helloWorld");
+			obj1.getMessage();
+			
+			HelloWorld2 obj2 = (HelloWorld2) context.getBean("helloWorld2");
 			obj2.getMessage();
+			
 		}catch(Exception e) {
 
 		}finally {

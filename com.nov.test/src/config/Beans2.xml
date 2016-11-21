@@ -8,5 +8,11 @@
    <bean id="helloWorld" class="com.nov.test.Spring.HelloWorld" scope="singleton" init-method="init" destroy-method="destroy2">
        <property name="message" value="Hello World!"/>
    </bean>
+   
+   <bean id="helloWorld2" class="com.nov.test.Spring.HelloWorld2" scope="singleton">
+       <property name="message" value="Hello World2!"/>
+   </bean>
+   
+   <bean class="com.nov.test.Spring.InitHelloWorld" />
 
 </beans>
