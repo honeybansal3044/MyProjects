@@ -9,6 +9,10 @@ import org.springframework.beans.factory.InitializingBean;
 public class HelloWorld implements InitializingBean, DisposableBean  {
 
 	private String message;
+	
+	private HelloWorld() {
+		
+	}
 
 	public void setMessage(String message) {
 		this.message = message;
