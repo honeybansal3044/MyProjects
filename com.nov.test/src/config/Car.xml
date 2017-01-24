@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans" 
+	xmlns:util="http://www.springframework.org/schema/util" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd 
+    http://www.springframework.org/schema/util
+    http://www.springframework.org/schema/util/spring-util.xsd">
+
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+
+	<bean id="car" class="com.jan.test.Spring.Car">
+		<property name="name" value="ford">
+		</property>
+		<property name="capacity" value="4">
+		</property>
+		<property name="engine" ref="en">
+		</property>
+		<property name="names">
+			<list>
+				<value>Audi</value>
+				<value>Ford</value>
+				<value>BMW</value>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="cars" class="com.jan.test.Spring.Car">
+		<property name="names">
+			<list>
+				<value>Audi</value>
+				<value>Ford</value>
+				<value>BMW</value>
+			</list>
+		</property>
+		<property name="capacity" value="4">
+		</property>
+		<property name="engines">
+			<list>
+				<ref bean="en" />
+				<ref bean="en1" />
+				<ref bean="en2" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="carnames" class="com.jan.test.Spring.Car">
+		<property name="carnames">
+			<util:set set-class="java.util.TreeSet">
+				<value>Audi</value>
+				<value>Ford</value>
+				<value>BMW</value>
+			</util:set>
+		</property>
+		<property name="capacity" value="4">
+		</property>
+	</bean>
+
+
+</beans>

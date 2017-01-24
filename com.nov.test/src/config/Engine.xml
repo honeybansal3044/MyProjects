@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+
+   <bean id="en" class="com.jan.test.Spring.Engine">
+       <property name="model" value="2017">
+       </property>
+   </bean>
+   
+   <bean id="en1" class="com.jan.test.Spring.Engine">
+       <property name="model" value="2016">
+       </property>
+   </bean>
+   
+   <bean id="en2" class="com.jan.test.Spring.Engine">
+       <property name="model" value="2015">
+       </property>
+   </bean>
+
+</beans>
