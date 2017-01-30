@@ -12,4 +12,14 @@
     <servlet-name>helloWorld</servlet-name>
     <url-pattern>*.htm</url-pattern>
   </servlet-mapping>
+  
+   <servlet>
+    <servlet-name>helloWorld2</servlet-name>
+    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>helloWorld2</servlet-name>
+    <url-pattern>*.htm2</url-pattern>
+  </servlet-mapping>
+  
 </web-app>

@@ -7,16 +7,16 @@
 	
 
 	<!-- default handler mapping -->
-	<!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean> -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
 	
 	<!-- controller handler mapping not require in case of url mapping-->
-	<!-- <bean name="/hello.htm" class="controller.HelloController"></bean> -->
+	<bean name="/hello2.htm2" class="controller.HelloController"></bean>
 	
 	<!-- view resolver -->
-	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
-	</bean> -->
+	</bean>
 	
 	
 	
@@ -38,7 +38,7 @@
 	</bean> -->
 	
 	<!-- Contoller class name handler mapping -->
-	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+	<!-- <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
 	</bean>
 
 	<bean class="controller.HelloController"></bean>
@@ -46,6 +46,6 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
-	</bean>
+	</bean> -->
 
 </beans>

@@ -8,7 +8,12 @@
 <body>
 	<h1>Hello World</h1>
 	<form action="./hello.htm">
-		Name:<input type="text" name="name"/>
+		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
+	<h1>Hello World2</h1>
+	<form action="./hello2.htm2">
+		Name:<input type="text" name="name" value="Honey"/>
 			 <input type="submit" value="Say Hello"/>
 	</form>
 </body>
