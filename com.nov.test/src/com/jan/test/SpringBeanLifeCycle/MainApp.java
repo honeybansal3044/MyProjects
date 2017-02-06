@@ -14,7 +14,7 @@ public class MainApp {
 		try {
 			context = new ClassPathXmlApplicationContext("config\\DBBean.xml");
 			DBConnect dbc = (DBConnect) context.getBean("db");
-			dbc.save(1, "hello", 2);
+			dbc.save(11, "hello", 2);
 
 		} catch (Exception e) {
 			e.printStackTrace();

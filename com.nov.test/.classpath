@@ -23,7 +23,10 @@
 	<classpathentry kind="lib" path="lib/spring-webmvc-portlet-4.3.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/spring-websocket-4.3.4.RELEASE.jar"/>
 	<classpathentry kind="lib" path="lib/commons-net-3.5.jar"/>
-	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.5-bin.jar"/>
 	<classpathentry kind="lib" path="lib/spring-aop-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat-juli-8.0.41.jar"/>
+	<classpathentry kind="lib" path="lib/tomcat-dbcp-9.0.0.M15.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-5.1.40-bin.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

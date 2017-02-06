@@ -7,17 +7,39 @@
 	
 
 	<!-- default handler mapping -->
-	<!-- <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean> -->
+	<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"></bean>
 	
 	<!-- controller handler mapping not require in case of url mapping-->
-	<!-- <bean name="/hello.htm" class="controller.HelloController"></bean> -->
+	<bean name="/hello.htm" class="controller.HelloController"></bean>
+	<bean name="/hello2.htm" class="controller.HelloAbstractController"></bean>
+	<bean name="/hello3.htm" class="controller.HelloParametrizableViewController">
+		<property name="viewName" value="success"></property>
+	</bean>
+	<bean name="/hello4.htm" class="org.springframework.web.servlet.mvc.UrlFilenameViewController"></bean>
+	
+	
+	<bean class="org.springframework.web.servlet.handler.SimpleUrlHandlerMapping">
+		<property name="mappings">
+			<props>
+				<prop key="/hello5.htm">hc</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="hc" class="controller.MultiActionController">
+		<property name="methodNameResolver">
+			<bean class="org.springframework.web.servlet.mvc.multiaction.InternalPathMethodNameResolver">
+				<property name="prefix" value=""></property>
+				<property name="suffix" value=""></property>
+			</bean>
+		</property>
+	</bean>
+	
 	
 	<!-- view resolver -->
-	<!-- <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
-	</bean> -->
-	
+	</bean>	
 	
 	
 	
@@ -38,7 +60,7 @@
 	</bean> -->
 	
 	<!-- Contoller class name handler mapping -->
-	<bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
+	<!-- <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping">
 	</bean>
 
 	<bean class="controller.HelloController"></bean>
@@ -46,6 +68,6 @@
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/"></property>
 		<property name="suffix" value=".jsp"></property>
-	</bean>
+	</bean> -->
 
 </beans>

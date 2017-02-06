@@ -6,13 +6,32 @@
 <title>Hello World</title>
 </head>
 <body>
-	<h1>Hello World</h1>
+	<h3>Hello World</h3>
 	<form action="./hello.htm">
 		Name:<input type="text" name="name" value="Honey"/>
 			 <input type="submit" value="Say Hello"/>
 	</form>
-	<h1>Hello World2</h1>
-	<form action="./hello2.htm2">
+	
+	<h3>Hello World2</h3>
+	<form action="./hello2.htm">
+		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
+	
+	<h3>Hello World3</h3 >
+	<form action="./hello3.htm">
+		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
+	
+	<h3>Hello World4</h3 >
+	<form action="./hello4.htm">
+		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
+	
+	<h3>Hello World5</h3 >
+	<form action="./hello5.htm">
 		Name:<input type="text" name="name" value="Honey"/>
 			 <input type="submit" value="Say Hello"/>
 	</form>
