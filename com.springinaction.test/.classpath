@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/c3p0-0.9.5.2.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/commons-net-3.5.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/mysql-connector-java-5.1.40-bin.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-aop-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-aspects-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-beans-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-context-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-context-support-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-core-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-expression-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-instrument-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-instrument-tomcat-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-jdbc-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-jms-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-messaging-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-orm-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-oxm-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-test-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-tx-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-web-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-webmvc-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-webmvc-portlet-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/spring-websocket-4.3.4.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/tomcat-dbcp-9.0.0.M15.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/tomcat-juli-8.0.41.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/aopalliance-.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/aspectj-1.6.9.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/aspectj-weaver.jar"/>
+	<classpathentry kind="lib" path="/com.nov.test/lib/aspectjrt.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
