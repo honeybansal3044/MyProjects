@@ -9,7 +9,7 @@ import sia.knights.config.KnightConfig;
 public class KnightMain {
 
 	public static void main(String[] args) throws Exception {
-		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("META-INF/spring/knight.xml");
+		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("classpath:sia/knights/config/knight.xml");
 		Knight knight = context.getBean(Knight.class);
 		knight.embarkOnQuest();
 		context.close();
@@ -19,7 +19,7 @@ public class KnightMain {
 		knight1.embarkOnQuest();
 		context1.close();
 		
-		ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("META-INF/spring/minstrel.xml");
+		ClassPathXmlApplicationContext context2 = new ClassPathXmlApplicationContext("classpath:/sia/knights/config/minstrel.xml");
 		Knight knight2 = context2.getBean(Knight.class);
 		knight2.embarkOnQuest();
 		context2.close();
