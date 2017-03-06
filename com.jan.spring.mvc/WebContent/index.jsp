@@ -35,5 +35,11 @@
 		Name:<input type="text" name="name" value="Honey"/>
 			 <input type="submit" value="Say Hello"/>
 	</form>
+	
+	<h3>Hello World6</h3 >
+	<form action="./hello6.htm">
+		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
 </body>
 </html>
