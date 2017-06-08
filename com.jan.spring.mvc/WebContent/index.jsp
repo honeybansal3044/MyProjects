@@ -37,8 +37,15 @@
 	</form>
 	
 	<h3>Hello World6</h3 >
-	<form action="./hello6.htm">
+	<form action="./hello6.htm" method="post">
 		Name:<input type="text" name="name" value="Honey"/>
+			 <input type="submit" value="Say Hello"/>
+	</form>
+	
+	<h3>Hello World7</h3 >
+	<form action="./hello7.htm" method="post">
+		Name:<input type="text" name="name" value="Honey"/>
+		Address:<input type="text" name="address" value="Memphis"/>
 			 <input type="submit" value="Say Hello"/>
 	</form>
 </body>

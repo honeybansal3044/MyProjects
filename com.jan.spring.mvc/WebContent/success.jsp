@@ -6,6 +6,10 @@
 <title>Hello World</title>
 </head>
 <body>
+	${msgPrefix}
 	${msg}
+	${person.name}
+	${person.address};
+	
 </body>
 </html>
