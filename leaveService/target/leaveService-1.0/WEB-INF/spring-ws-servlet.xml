@@ -20,4 +20,17 @@
       targetNamespace="http://tutorialspoint.com/hr/definitions">                               
       <sws:xsd location="/WEB-INF/hr.xsd"/>                                                  
    </sws:dynamic-wsdl>
+   
+   <bean id="exceptionResolver" class="com.tutorialspoint.hr.service.DetailSoapFaultDefinitionExceptionResolver">
+   			<property name="order" value="1"></property>
+            <property name="defaultFault" value="RECEIVER,Server error">
+            </property>
+        	<property name="exceptionMappings">
+        	<props>
+        		<prop key="com.tutorialspoint.hr.service.ServiceFaultException">SERVER,FaultMsg</prop>
+        		<prop key="java.lang.Exception">SERVER,FaultMsg</prop>
+        	</props>
+        	</property>
+    </bean>
+   
 </beans>

@@ -1,9 +1,0 @@
-com\tutorialspoint\hr\ws\HolidayEndpoint.class
-xsd\model\GetLeaveRequest.class
-com\tutorialspoint\hr\service\HumanResourceService.class
-com\tutorialspoint\hr\service\HumanResourceServiceImpl.class
-xsd\model\GetLeaveResponse.class
-xsd\model\LeaveType.class
-xsd\model\ObjectFactory.class
-xsd\model\package-info.class
-xsd\model\EmployeeType.class

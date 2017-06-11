@@ -12,6 +12,8 @@ import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
 import com.tutorialspoint.hr.service.HumanResourceService;
+import com.tutorialspoint.hr.service.ServiceFault;
+import com.tutorialspoint.hr.service.ServiceFaultException;
 
 import xsd.model.EmployeeType;
 import xsd.model.GetLeaveRequest;
@@ -46,6 +48,9 @@ public class HolidayEndpoint {
 		emp.setNumber(empId);
 		response.setEmployee(emp);
 		response.setMessage("Hello " + name + " " + name2 + " your leave has been approved. Enjoy!");
+		
+		
+		//throw new ServiceFaultException("Exception thrown", new ServiceFault("101", "User thrown exception"));
 		
 		return response;
 	}
