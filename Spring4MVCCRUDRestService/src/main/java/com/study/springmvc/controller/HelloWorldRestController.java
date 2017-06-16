@@ -1,5 +1,6 @@
 package com.study.springmvc.controller;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,13 +8,16 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.util.UriComponentsBuilder;
 
+import com.study.springmvc.exception.UserException;
 import com.study.springmvc.service.User;
 import com.study.springmvc.service.UserService;
 
@@ -24,6 +28,29 @@ public class HelloWorldRestController {
 	UserService userService; // Service which will do all data retrieval/manipulation work
 
 	// -------------------Retrieve All Users--------------------------------------------------------
+	
+	@RequestMapping(value = "/users/", method = RequestMethod.GET)
+	public List<User> getAllUsers() throws UserException {
+		List<User> users = new ArrayList<User>(); //userService.findAllUsers();
+		if (users.isEmpty()) {
+			throw new UserException();
+		}
+		return users;
+	}
+	
+	@ResponseStatus(value=HttpStatus.NOT_FOUND, reason="Users are not found in the system.")
+	@ExceptionHandler(UserException.class)
+	public void exceptionHandler() {
+		System.out.println("Exception");
+	}
+	
+	//@ExceptionHandler(UserException.class)
+	public ResponseEntity<List<String>> exceptionHandler2() {
+		List<String> error = new ArrayList<String>();
+		error.add("Users are not found in the system.");
+		error.add("Users are not found in the system.");
+		return new ResponseEntity<List<String>>(error, HttpStatus.NOT_FOUND);
+	}
 
 	@RequestMapping(value = "/user/", method = RequestMethod.GET)
 	public ResponseEntity<List<User>> listAllUsers() {
