@@ -8,7 +8,7 @@ public class App {
 	public static void main(String[] args) {
 		LeaveServiceClient client = new LeaveServiceClient();
 		Jaxb2Marshaller marshaller = new Jaxb2Marshaller();
-		marshaller.setContextPath("xsd.model");
+		marshaller.setContextPath("com.tutorialspoint.hr.schemas");
 		client.setMarshaller(marshaller);
 		client.setUnmarshaller(marshaller);
 		GetLeaveResponse response = client.getLeaveServiceResponse();
