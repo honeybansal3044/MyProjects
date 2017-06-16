@@ -9,6 +9,7 @@ import com.tutorialspoint.hr.schemas.GetLeaveRequest;
 import com.tutorialspoint.hr.schemas.GetLeaveResponse;
 import com.tutorialspoint.hr.schemas.LeaveType;
 
+//http://localhost:8080/leaveService/leave.wsdl - Location for wsdl
 public class LeaveServiceClient extends WebServiceGatewaySupport {
 
 	public GetLeaveResponse getLeaveServiceResponse() {
