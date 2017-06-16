@@ -11,13 +11,10 @@ import org.springframework.ws.server.endpoint.annotation.PayloadRoot;
 import org.springframework.ws.server.endpoint.annotation.RequestPayload;
 import org.springframework.ws.server.endpoint.annotation.ResponsePayload;
 
+import com.tutorialspoint.hr.schemas.EmployeeType;
+import com.tutorialspoint.hr.schemas.GetLeaveRequest;
+import com.tutorialspoint.hr.schemas.GetLeaveResponse;
 import com.tutorialspoint.hr.service.HumanResourceService;
-import com.tutorialspoint.hr.service.ServiceFault;
-import com.tutorialspoint.hr.service.ServiceFaultException;
-
-import xsd.model.EmployeeType;
-import xsd.model.GetLeaveRequest;
-import xsd.model.GetLeaveResponse;
 
 @Endpoint
 public class HolidayEndpoint {

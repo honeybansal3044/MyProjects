@@ -4,10 +4,10 @@ import java.math.BigInteger;
 
 import org.springframework.ws.client.core.support.WebServiceGatewaySupport;
 
-import xsd.model.EmployeeType;
-import xsd.model.GetLeaveRequest;
-import xsd.model.GetLeaveResponse;
-import xsd.model.LeaveType;
+import com.tutorialspoint.hr.schemas.EmployeeType;
+import com.tutorialspoint.hr.schemas.GetLeaveRequest;
+import com.tutorialspoint.hr.schemas.GetLeaveResponse;
+import com.tutorialspoint.hr.schemas.LeaveType;
 
 public class LeaveServiceClient extends WebServiceGatewaySupport {
 

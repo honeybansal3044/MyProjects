@@ -2,7 +2,7 @@ package com.tutorialspoint.hr;
 
 import org.springframework.oxm.jaxb.Jaxb2Marshaller;
 
-import xsd.model.GetLeaveResponse;
+import com.tutorialspoint.hr.schemas.GetLeaveResponse;
 
 public class App {
 	public static void main(String[] args) {

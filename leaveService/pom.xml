@@ -37,25 +37,23 @@
    <build>
         <plugins>
             <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>jaxb2-maven-plugin</artifactId>
-            <version>1.5</version>
-            <executions>
-                <execution>
-                    <id>id1</id>
-                    <goals>
-                        <goal>xjc</goal>
-                    </goals>
-                    <configuration>
-                        <outputDirectory>src/main/java</outputDirectory>
-                        <clearOutputDir>false</clearOutputDir>
-                        <packageName>xsd.model</packageName>
-                        <schemaDirectory>src/main/webapp/WEB-INF</schemaDirectory>
-                        <schemaFiles>hr.xsd</schemaFiles>
-                    </configuration>
-                </execution>
-            </executions>
-        </plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>1.6</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<schemaDirectory>${project.basedir}/src/main/resources/</schemaDirectory>
+					<outputDirectory>${project.basedir}/src/main/java</outputDirectory>
+					<clearOutputDir>false</clearOutputDir>
+				</configuration>
+			</plugin>
         </plugins>
     </build>
    
