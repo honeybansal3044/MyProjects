@@ -16,7 +16,6 @@ public class CustomerServiceImpl implements ICustomerService {
 	@Override
 	public void addCustomer() {
 		System.out.println("Adding a customer, please wait.");
-
 		this.customer.setName("Honey Bansal");
 		this.customer.setCity("Memphis");
 		System.out.println("Customer " + this.customer.getName() + " from " + this.customer.getCity() + " has been added.");

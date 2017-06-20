@@ -13,7 +13,7 @@ public class PointCutConfig {
 		System.out.println("I am Print Point Cut 1");
 	}
 
-	@Pointcut("execution(* aop..*.*(..))")
+	@Pointcut("execution(* aop..*.addCustomer(..))")
 	public void printPointCut2() {
 		System.out.println("I am Print Point Cut 2");
 	}
