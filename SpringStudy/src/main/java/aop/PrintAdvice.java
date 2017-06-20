@@ -5,6 +5,7 @@ import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
+import org.springframework.aop.framework.AopContext;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -14,6 +15,7 @@ public class PrintAdvice {
 	@Before("aop.PointCutConfig.printPointCut()")
 	public void printBeforAdvice(JoinPoint jp) {
 		System.out.println("I am inside printBeforAdvice");
+		AopContext.currentProxy();
 	}
 
 	@Around("aop.PointCutConfig.printPointCut2()")

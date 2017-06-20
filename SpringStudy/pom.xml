@@ -54,6 +54,13 @@
 	    <artifactId>aspectjrt</artifactId>
 	    <version>1.5.4</version>
 	</dependency>
+	<!-- https://mvnrepository.com/artifact/org.springframework/spring-aspects -->
+	<dependency>
+	    <groupId>org.springframework</groupId>
+	    <artifactId>spring-aspects</artifactId>
+	    <version>4.3.9.RELEASE</version>
+	</dependency>
+
 	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
 	<dependency>
 	    <groupId>org.aspectj</groupId>

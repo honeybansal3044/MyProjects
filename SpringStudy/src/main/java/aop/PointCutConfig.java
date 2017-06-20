@@ -8,12 +8,12 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class PointCutConfig {
 
-	@Pointcut("execution(* aop.impl..*.addCustomer(..))")
+	@Pointcut("execution(* aop..*.addCustomer(..))")
 	public void printPointCut() {
 		System.out.println("I am Print Point Cut 1");
 	}
 
-	@Pointcut("execution(* aop.impl..*.*(..))")
+	@Pointcut("execution(* aop..*.*(..))")
 	public void printPointCut2() {
 		System.out.println("I am Print Point Cut 2");
 	}
