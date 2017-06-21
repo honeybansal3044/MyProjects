@@ -12,6 +12,8 @@ public class MainApp {
 		CustomerImpl service = context.getBean(CustomerImpl.class);
 		service.addCustomer();
 
+		// ((ICustomerAspect) service).showCustomerDetails();
+
 		((ConfigurableApplicationContext) context).close();
 	}
 
