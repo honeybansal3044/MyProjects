@@ -1,0 +1,37 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="triangle_preem" class="com.edu.spring.Triangle_DepInject_Preemptive">
+		<!-- <property name="type" value="abhishek"></property> -->
+		<constructor-arg index="0" type="String" value="hello"></constructor-arg>
+		<constructor-arg index="1" type="int" value="20"></constructor-arg>
+	</bean>
+	
+	<bean id="triangle" class="com.edu.spring.Triangle">
+		<property name="pointA" ref="pointa"></property>
+		<!-- Inner Bean Example. Here pointb is inner bean of triangle class.
+			 We define those classes here which we know will be used with in Triangle 
+			 class and nowhere else.
+		 -->
+		<property name="pointB">
+			<bean id="pointb" class="com.edu.spring.Point">
+				<property name="x" value="0"></property>
+				<property name="y" value="-20"></property>
+			</bean>
+		</property>
+		<property name="pointC" ref="pointc"></property>
+	</bean>
+	
+	<bean id="pointa" class="com.edu.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="pointc" class="com.edu.spring.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+
+</beans>
