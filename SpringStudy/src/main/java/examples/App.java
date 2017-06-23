@@ -15,7 +15,9 @@ public class App {
 		manager = context.getBean("commandManager", AbstractCommandManager.class);
 		manager.procees();
 		
-		System.out.println(context.getBean(MyService.class).getServiceName());
+		System.out.println(context.getBean(MyService.class));
+		
+		System.out.println(context.getBean(MyService.class));
 		
 		((ConfigurableApplicationContext) context).close();
 	}

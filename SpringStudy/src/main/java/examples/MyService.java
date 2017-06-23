@@ -3,6 +3,10 @@ package examples;
 public class MyService {
 
 	private String serviceName;
+	
+	private MyService() {
+		
+	}
 
 	public String getServiceName() {
 		return serviceName;

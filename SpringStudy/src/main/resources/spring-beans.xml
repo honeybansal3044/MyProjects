@@ -10,7 +10,7 @@
 	
 	<bean class="examples.CustomBeanPostProcessor"></bean>
 
-	<bean class="examples.MyService">
+	<bean class="examples.MyService" scope="prototype">
 		<property name="serviceName" value="service"/>
 	</bean>
 
