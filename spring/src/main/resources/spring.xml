@@ -40,8 +40,8 @@
 	</bean>
 	
 	<bean id="pointa" class="com.edu.spring.Point">
-		<property name="x" value="0"></property>
-		<property name="y" value="0"></property>
+		<property name="x" value="${pointA.pointX}"></property>
+		<property name="y" value="${pointA.pointY}"></property>
 	</bean>
 	<bean id="pointb" class="com.edu.spring.Point">
 		<property name="x" value="0"></property>
@@ -56,4 +56,10 @@
 	<alias name="triangle" alias="triangle-alias"/>
 	<!-- Registering Bean Post Processor -->
 	<bean class="com.edu.spring.DisplayNameBeanPostProcessor"></bean>
+	<!-- Registering Bean Factory Post Processor -->
+	<bean class="com.edu.spring.MyBeanFactoryPP"></bean>
+	<!-- Registering Property file which can be used to inject values from some property file instead of hardcode here. -->
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="pointsconfig.properties"></property>
+	</bean>
 </beans>
