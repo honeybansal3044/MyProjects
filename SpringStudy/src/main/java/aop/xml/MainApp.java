@@ -9,7 +9,7 @@ public class MainApp {
 	public static void main(String[] args) {
 		ApplicationContext context = new ClassPathXmlApplicationContext("spring-beans-aop.xml");
 
-		CustomerImpl service = context.getBean(CustomerImpl.class);
+		CustomerBo service = context.getBean(CustomerBo.class);
 		service.addCustomer();
 
 		// ((ICustomerAspect) service).showCustomerDetails();

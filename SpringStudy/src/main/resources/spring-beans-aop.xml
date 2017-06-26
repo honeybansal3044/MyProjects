@@ -14,7 +14,7 @@
 		
 		<bean id="customerDelegateAspect" class="aop.xml.CustomerAspect"></bean>
 		
-		<aop:config proxy-target-class="true">
+		<aop:config>
 		
 			<!-- <aop:pointcut expression="execution(* aop.xml.CustomerBo.addCustomer(..))" id="advisorPointCut"/> -->
 			
