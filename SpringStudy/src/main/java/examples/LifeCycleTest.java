@@ -12,12 +12,12 @@ public class LifeCycleTest {
 	
 	@PostConstruct
 	public void PostContructTest() {
-
+		System.out.println("I am inside PostContructTest");
 	}
 	
 	@PreDestroy
 	public void PreDestroyTest() {
-
+		System.out.println("I am inside PreDestroyTest");
 	}
 
 }

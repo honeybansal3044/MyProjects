@@ -2,19 +2,42 @@
 <beans xmlns="http://www.springframework.org/schema/beans" 
 		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
 		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
-							http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+							http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd
+							http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd ">
 
 		
 		<bean id="logAspect" class="aop.xml.LoggingAspect" />
 		
 		<bean id="customer" class="aop.xml.CustomerImpl" />
 		
-		<aop:config proxy-target-class="true">
+		<bean id="customerDelegateAspect" class="aop.xml.CustomerAspect"></bean>
+		
+		<aop:config>
+		
+			<!-- <aop:pointcut expression="execution(* aop.xml.CustomerBo.addCustomer(..))" id="advisorPointCut"/> -->
+			
+			<!-- <aop:advisor advice-ref="advisorLoggingAdvice" pointcut-ref="advisorPointCut" /> -->
+		
 			<aop:aspect id="logging" ref="logAspect">
 				<aop:pointcut expression="execution(* aop.xml.CustomerBo.addCustomer(..))" id="pointCutBefore"/>
 				<aop:before method="beforeAdvice" pointcut-ref="pointCutBefore"/>
 			</aop:aspect>
+			
+			<aop:aspect ref="customerDelegateAspect">
+				<aop:declare-parents types-matching="aop.xml.CustomerBo+" implement-interface="aop.xml.ICustomerAspect" delegate-ref="customerDelegateAspect"/>
+				<aop:before method="showCustomerDetails" pointcut="execution(* aop.xml.CustomerBo.addCustomer(..)) and this(iCustomerAspect)"/>
+			</aop:aspect>
+			
+			
+			
 		</aop:config>
+		
+		<!-- <tx:advice id="advisorLoggingAdvice">
+			<tx:attributes>
+				<tx:method name="beforeAdvice" propagation="REQUIRED"/>
+			</tx:attributes>
+		</tx:advice> -->
   	
 </beans>
