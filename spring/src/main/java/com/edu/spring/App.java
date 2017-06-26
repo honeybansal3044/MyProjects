@@ -20,7 +20,7 @@ public class App
     	Triangle triangle = (Triangle) factory.getBean("triangle");
     	triangle.draw();*/
     	ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-    	Triangle triangle = (Triangle) context.getBean("triangle");
+    	Triangle triangle = (Triangle) context.getBean("triangle-alias");
     	triangle.draw();
     	
     }

@@ -16,7 +16,7 @@
 			 class and nowhere else.
 		 -->
 		<property name="pointB">
-			<bean id="pointb" class="com.edu.spring.Point">
+			<bean class="com.edu.spring.Point">
 				<property name="x" value="0"></property>
 				<property name="y" value="-20"></property>
 			</bean>
@@ -33,5 +33,8 @@
 		<property name="x" value="20"></property>
 		<property name="y" value="0"></property>
 	</bean>
+	
+	<!-- With Alias tag we can give different name to the same bean and get it using Appcontext.getBean("triangle-alias") -->
+	<alias name="triangle" alias="triangle-alias"/>
 
 </beans>
