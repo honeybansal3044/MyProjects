@@ -33,7 +33,8 @@
 	</bean>
 	
 	<!-- Here triangle is the subclass of triangleParent class. Using parent=<class_name>, we can give it's parent. -->
-	<bean id="triangle" class="com.edu.spring.Triangle" parent="triangleParent">
+	<bean id="triangle" class="com.edu.spring.Triangle" parent="triangleParent" autowire="byName" scope="singleton"
+				init-method="initBean" destroy-method="destroyBean">
 		<property name="pointB" ref="pointb"></property>
 		<property name="pointC" ref="pointc"></property>
 	</bean>
@@ -53,5 +54,6 @@
 	
 	<!-- With Alias tag we can give different name to the same bean and get it using Appcontext.getBean("triangle-alias") -->
 	<alias name="triangle" alias="triangle-alias"/>
-
+	<!-- Registering Bean Post Processor -->
+	<bean class="com.edu.spring.DisplayNameBeanPostProcessor"></bean>
 </beans>
