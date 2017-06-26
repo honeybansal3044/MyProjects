@@ -52,6 +52,10 @@
 		<property name="y" value="0"></property>
 	</bean>
 	
+	<bean id="circle" class="com.edu.spring.Circle">
+		<property name="center" ref="pointa"></property>
+	</bean>
+	
 	<!-- With Alias tag we can give different name to the same bean and get it using Appcontext.getBean("triangle-alias") -->
 	<alias name="triangle" alias="triangle-alias"/>
 	<!-- Registering Bean Post Processor -->

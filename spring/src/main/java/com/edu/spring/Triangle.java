@@ -7,7 +7,7 @@ import org.springframework.beans.factory.InitializingBean;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
-public class Triangle implements ApplicationContextAware, BeanNameAware, InitializingBean, DisposableBean {
+public class Triangle implements Shape, ApplicationContextAware, BeanNameAware, InitializingBean, DisposableBean {
 	
 	private Point pointA;
 	private Point pointB;
