@@ -9,12 +9,13 @@
 		<constructor-arg index="1" type="int" value="20"></constructor-arg>
 	</bean>
 	
-	<bean id="triangle" class="com.edu.spring.Triangle">
-		<property name="pointA" ref="pointa"></property>
-		<!-- Inner Bean Example. Here pointb is inner bean of triangle class.
+	<!-- Inner Bean Example. Here pointb is inner bean of triangle class.
 			 We define those classes here which we know will be used with in Triangle 
 			 class and nowhere else.
-		 -->
+		 
+	<bean id="triangleInnerBeanExample" class="com.edu.spring.Triangle">
+		<property name="pointA" ref="pointa"></property>
+		
 		<property name="pointB">
 			<bean class="com.edu.spring.Point">
 				<property name="x" value="0"></property>
@@ -23,12 +24,28 @@
 		</property>
 		<property name="pointC" ref="pointc"></property>
 	</bean>
+	-->
+	<!-- Here triangleParent is the abstract class which is also called incomplete class. This is a template for other classes to use 
+		We can not create it's instance. i.e we can not get it's instance from appcontext.getBean() method.
+	-->
+	<bean id="triangleParent" class="com.edu.spring.Triangle" abstract="true">
+		<property name="pointA" ref="pointa"></property>
+	</bean>
+	
+	<!-- Here triangle is the subclass of triangleParent class. Using parent=<class_name>, we can give it's parent. -->
+	<bean id="triangle" class="com.edu.spring.Triangle" parent="triangleParent">
+		<property name="pointB" ref="pointb"></property>
+		<property name="pointC" ref="pointc"></property>
+	</bean>
 	
 	<bean id="pointa" class="com.edu.spring.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="0"></property>
 	</bean>
-	
+	<bean id="pointb" class="com.edu.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="-20"></property>
+	</bean>
 	<bean id="pointc" class="com.edu.spring.Point">
 		<property name="x" value="20"></property>
 		<property name="y" value="0"></property>
