@@ -8,6 +8,7 @@
 
 <!-- <context:annotation-config></context:annotation-config> -->
 <context:component-scan base-package="com.edu.spring"></context:component-scan>
+
 	<bean id="triangle_preem" class="com.edu.spring.Triangle_DepInject_Preemptive">
 		<!-- <property name="type" value="abhishek"></property> -->
 		<constructor-arg index="0" type="String" value="hello"></constructor-arg>
