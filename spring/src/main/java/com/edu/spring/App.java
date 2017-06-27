@@ -28,8 +28,8 @@ public class App
     	// AbstractApplicationContext is used to regiter registerShutdownHook() which publishes the destroy event for all beans.
     	AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
     	context.registerShutdownHook();
-    	Shape triangle = (Shape) context.getBean("circle");
-    	triangle.draw();
+    	Shape shape = (Shape) context.getBean("square");
+    	shape.draw();
     	
     }
 }

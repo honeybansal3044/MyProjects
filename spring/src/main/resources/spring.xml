@@ -1,8 +1,13 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
 
+<!-- <context:annotation-config></context:annotation-config> -->
+<context:component-scan base-package="com.edu.spring"></context:component-scan>
 	<bean id="triangle_preem" class="com.edu.spring.Triangle_DepInject_Preemptive">
 		<!-- <property name="type" value="abhishek"></property> -->
 		<constructor-arg index="0" type="String" value="hello"></constructor-arg>
@@ -29,31 +34,41 @@
 		We can not create it's instance. i.e we can not get it's instance from appcontext.getBean() method.
 	-->
 	<bean id="triangleParent" class="com.edu.spring.Triangle" abstract="true">
-		<property name="pointA" ref="pointa"></property>
+		<property name="pointA" ref="pointA"></property>
 	</bean>
 	
-	<!-- Here triangle is the subclass of triangleParent class. Using parent=<class_name>, we can give it's parent. -->
+	<!-- Here triangle is the subclass of triangleParent class. Using parent=<class_name>, we can give it's parent. 
+		Not injecting dependencies using <property> that is because of autowire="byName". Spring will look into the bean class
+		to see if bean's instance variables are defined here as bean. If yes, Spring will inject it automatically.
+	-->
 	<bean id="triangle" class="com.edu.spring.Triangle" parent="triangleParent" autowire="byName" scope="singleton"
 				init-method="initBean" destroy-method="destroyBean">
-		<property name="pointB" ref="pointb"></property>
-		<property name="pointC" ref="pointc"></property>
-	</bean>
-	
-	<bean id="pointa" class="com.edu.spring.Point">
-		<property name="x" value="${pointA.pointX}"></property>
-		<property name="y" value="${pointA.pointY}"></property>
-	</bean>
-	<bean id="pointb" class="com.edu.spring.Point">
-		<property name="x" value="0"></property>
-		<property name="y" value="-20"></property>
-	</bean>
-	<bean id="pointc" class="com.edu.spring.Point">
-		<property name="x" value="20"></property>
-		<property name="y" value="0"></property>
+		
 	</bean>
 	
 	<bean id="circle" class="com.edu.spring.Circle">
-		<property name="center" ref="pointa"></property>
+		<property name="center" ref="pointA"></property>
+	</bean>
+	
+	<!-- <bean id="square" class="com.edu.spring.Square">
+		
+	</bean> -->
+	
+	<bean id="pointA" class="com.edu.spring.Point">
+		<property name="x" value="${pointA.pointX}"></property>
+		<property name="y" value="${pointA.pointY}"></property>
+	</bean>
+	<bean id="pointB" class="com.edu.spring.Point">
+		<property name="x" value="0"></property>
+		<property name="y" value="-20"></property>
+	</bean>
+	<bean id="pointC" class="com.edu.spring.Point">
+		<property name="x" value="20"></property>
+		<property name="y" value="0"></property>
+	</bean>
+	<bean id="pointD" class="com.edu.spring.Point">
+		<property name="x" value="40"></property>
+		<property name="y" value="40"></property>
 	</bean>
 	
 	<!-- With Alias tag we can give different name to the same bean and get it using Appcontext.getBean("triangle-alias") -->
@@ -69,4 +84,5 @@
 	
 	<!-- This post processor is used to enable Required annotation -->
 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
+	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
 </beans>
