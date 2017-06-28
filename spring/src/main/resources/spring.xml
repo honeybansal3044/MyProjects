@@ -48,7 +48,7 @@
 	</bean>
 	
 	<bean id="circle" class="com.edu.spring.Circle">
-		<property name="center" ref="pointA"></property>
+		<!-- <property name="center" ref="pointA"></property> -->
 	</bean>
 	
 	<!-- <bean id="square" class="com.edu.spring.Square">

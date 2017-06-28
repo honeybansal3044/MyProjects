@@ -1,5 +1,7 @@
 package com.edu.spring;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Required;
 
 public class Circle implements Shape {
@@ -16,7 +18,15 @@ public class Circle implements Shape {
 	 * we would need to configure following class in beans.xml in order to make it work. 
 	 * org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor
 	 */
+	
+	/*
+	 * @Qualifier annotation is used to find the name with the name given if see if there is any bean bean defined with this name.
+	 * If it finds one, It will use that bean and inject it to the circle class.
+	 * So basically this works like "byName" annotation for @Autowired.
+	 */
 	@Required
+	@Autowired
+	@Qualifier("pointA")
 	public void setCenter(Point center) {
 		this.center = center;
 	}

@@ -25,11 +25,11 @@ public class App
     	Triangle triangle = (Triangle) context.getBean("triangle-alias");
     	triangle.draw();*/
     	
-    	// AbstractApplicationContext is used to regiter registerShutdownHook() which publishes the destroy event for all beans.
+    	// AbstractApplicationContext is used to register registerShutdownHook() which publishes the destroy event for all beans.
     	AbstractApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
-    	context.registerShutdownHook();
-    	Shape shape = (Shape) context.getBean("square");
+    	//context.registerShutdownHook();
+    	Shape shape = (Shape) context.getBean("circle");
     	shape.draw();
-    	
+    	context.close();
     }
 }
