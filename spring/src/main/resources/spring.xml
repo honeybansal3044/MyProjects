@@ -6,7 +6,7 @@
 	http://www.springframework.org/schema/context
 	http://www.springframework.org/schema/context/spring-context.xsd">
 
-<!-- <context:annotation-config></context:annotation-config> -->
+<context:annotation-config />
 <context:component-scan base-package="com.edu.spring"></context:component-scan>
 
 	<bean id="triangle_preem" class="com.edu.spring.Triangle_DepInject_Preemptive">
@@ -56,6 +56,9 @@
 	</bean> -->
 	
 	<bean id="pointA" class="com.edu.spring.Point">
+		<!-- This will be used if we give this name "pointAA" in the @Qualifier in the bean definition
+		 like this @Qualifier("pointAA") 
+		 <qualifier value="pointAA"></qualifier> -->
 		<property name="x" value="${pointA.pointX}"></property>
 		<property name="y" value="${pointA.pointY}"></property>
 	</bean>
@@ -86,4 +89,12 @@
 	<!-- This post processor is used to enable Required annotation -->
 	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
 	<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+	
+	<bean id="messageSource" class="org.springframework.context.support.ResourceBundleMessageSource">
+		<property name="basenames">
+			<list>
+				<value>custommessages</value>
+			</list>
+		</property>
+	</bean>
 </beans>
