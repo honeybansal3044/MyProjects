@@ -59,9 +59,11 @@ public class Circle implements Shape, ApplicationEventPublisherAware {
 		//System.out.println(this.getMessageSource().getMessage("greeting", null, "default greeting", null));
 	}
 
-	@Override
 	public void setApplicationEventPublisher(ApplicationEventPublisher publisher) {
 		this.publisher = publisher;
+		
 	}
+
+	
 
 }
