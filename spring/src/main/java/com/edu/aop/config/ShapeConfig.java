@@ -15,25 +15,25 @@ import com.edu.aop.service.ShapeService;
 public class ShapeConfig {
 	
 	@Bean
-	public ShapeService getShape () {
+	public ShapeService shape () {
 		ShapeService service = new ShapeService();
-		service.setCircle(getCircle());
-		service.setTriangle(getTriangle());
+		service.setCircle(circle());
+		service.setTriangle(triangle());
 		return service;
 	}
 	
 	@Bean
-	public Circle getCircle () {
+	public Circle circle () {
 		return new Circle();
 	}
 	
 	@Bean
-	public Triangle getTriangle () {
+	public Triangle triangle () {
 		return new Triangle();
 	}
 	
 	@Bean
-	public LoggingAspect getLoggingAspect () {
+	public LoggingAspect loggingAspect () {
 		return new LoggingAspect();
 	}
 }
