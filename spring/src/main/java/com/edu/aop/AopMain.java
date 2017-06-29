@@ -11,6 +11,7 @@ public class AopMain {
 	public static void main(String[] args) {
 		ApplicationContext context = new AnnotationConfigApplicationContext(ShapeConfig.class);
 		ShapeService service = context.getBean(ShapeService.class);
+		service.getCircle().setName("Dummy New");
 		System.out.println(service.getCircle().getName());
 	}
 
