@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 2013/2/22 04:45:44 by Hibernate Tools 4.0.0 -->
+<hibernate-mapping>
+    <class name="hibernate.ProductSales" table="product_sales">
+        <id name="saleId" type="int">
+            <column name="sale_id" />
+            <generator class="assigned" />
+        </id>
+        <many-to-one name="product" class="hibernate.Product" update="false" insert="false" fetch="select">
+            <column name="product_id" not-null="true" />
+        </many-to-one>
+<!--         <property name="productId" type="int"> -->
+<!--             <column name="product_id" not-null="true" /> -->
+<!--         </property> -->
+        <property name="saleBeginDate" type="timestamp">
+            <column name="sale_begin_date" length="19" not-null="true" />
+        </property>
+        <property name="quantity" type="int">
+            <column name="quantity" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

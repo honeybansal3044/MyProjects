@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-	<modelVersion>4.0.0</modelVersion>
-	<groupId>MVC</groupId>
-	<artifactId>SpringMVCStudy</artifactId>
-	<packaging>war</packaging>
-	<version>1.0</version>
-	<name>SpringMVCStudy Maven Webapp</name>
-	<url>http://maven.apache.org</url>
-
-	<properties>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>Security</groupId>
+  <artifactId>SpringSecurityStudy</artifactId>
+  <packaging>war</packaging>
+  <version>1.0</version>
+  <name>SpringSecurityStudy Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>
 		<java-version>1.8</java-version>
 		<org.springframework-version>4.3.9.RELEASE</org.springframework-version>
 	</properties>
@@ -215,7 +216,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>SpringMVCStudy</finalName>
+		<finalName>SpringSecurityStudy</finalName>
 		<pluginManagement>
 			<plugins>
 				<plugin>
@@ -233,7 +234,7 @@
 					<version>3.1.0</version>
 					<configuration>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>SpringMVCStudy</warName>
+						<warName>SpringSecurityStudy</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>
