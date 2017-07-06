@@ -17,7 +17,7 @@ public class StudentController {
 	}
 
 	@RequestMapping(value = "/addStudent", method = RequestMethod.POST)
-	public String addStudent(@ModelAttribute("studend") Student student, ModelMap model) {
+	public String addStudent(@ModelAttribute("student") Student student, ModelMap model) {
 		if (student.getName().length() < 5) {
 			throw new StudentException("Given name is too short");
 		} else {
