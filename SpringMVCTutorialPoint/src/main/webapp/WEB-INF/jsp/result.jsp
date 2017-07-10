@@ -2,6 +2,12 @@
 <html>
    <head>
       <title>Spring MVC Form Handling</title>
+      
+      <%
+      	String name = request.getParameter("name");
+      	System.out.println(name);
+      %>
+      
    </head>
 
    <body>

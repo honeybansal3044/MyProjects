@@ -21,9 +21,9 @@
 	</mvc:interceptors>
 	
     <!-- the ResourceBundleViewResolver -->
-	<bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
 	    <property name="basename" value="views"/>
-	</bean>
+	</bean> -->
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
