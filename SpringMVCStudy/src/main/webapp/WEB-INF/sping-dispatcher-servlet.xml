@@ -14,16 +14,16 @@
 		http://www.springframework.org/schema/util/spring-util.xsd">
 
 	<context:component-scan base-package="mvc"  />
-	
+	<mvc:resources mapping="/resources/**" location="WEB-INF/resources/" />
 	<mvc:annotation-driven/>
 	<mvc:interceptors>
 		<ref bean="officeHoursInterceptor"/>
 	</mvc:interceptors>
 	
     <!-- the ResourceBundleViewResolver -->
-	<!-- <bean id="viewResolver" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
+	<bean id="viewResolver1" class="org.springframework.web.servlet.view.ResourceBundleViewResolver">
 	    <property name="basename" value="views"/>
-	</bean> -->
+	</bean>
 	
 	<bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 	    <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>

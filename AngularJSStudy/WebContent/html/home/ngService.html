@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="ContactApp">
+<head>
+<meta charset="ISO-8859-1">
+<title>My Contact App</title>
+<link rel="stylesheet" href="../../css/ext/bootstrap/bootstrap.css">
+<link rel="stylesheet" href="../../css/ext/bootstrap/bootstrap-theme.css">
+
+<script type="text/javascript" src="../../js/ext/angular/angular.js"></script>
+<script type="text/javascript" src="../../js/int/ngService.js"></script>
+
+</head>
+
+<body>
+	<div class="container" ng-controller="HeaderCtrl as ctrlH">
+		<h4>{{ctrlH.title}}</h4>
+	</div>
+	<div class="container" ng-controller="ContactCtrl as ctrl">
+		<div class="row">
+			<ul class="list-group">
+			<li class="list-group-item" ng-repeat="contact in ctrl.contacts" ng-click="ctrl.selectContact($index)">
+				<span>Name: {{contact.name.first}} {{contact.name.last}}</span>
+			</li>
+			</ul>
+		</div>
+		
+		<div class="row">
+			<div class="media">
+			  <div class="media-left">
+			    <a href="#">
+			    	<img ng-src="{{ctrl.first.picture.large}}" ></img>
+			    </a>
+			  </div>
+			  <div class="media-body">
+			    <h4 class="media-heading">{{ctrl.first.name.first}} {{ctrl.first.name.last}}</h4>
+			    <div>
+			    	<p>Location</p>
+			    	<p>{{ctrl.first.location.street}} {{ctrl.first.location.city}} {{ctrl.first.location.state}}</p>
+			    	<p>Phone</p>
+			    	<p>{{ctrl.first.phone}}</p>
+			    </div>
+			  </div>
+			</div>
+		</div>
+	</div>
+	<div class="container" ng-controller="FooterCtrl as ctrlF">
+		<h4>{{ctrlF.title}}</h4>
+	</div>
+</body>
+
+</html>

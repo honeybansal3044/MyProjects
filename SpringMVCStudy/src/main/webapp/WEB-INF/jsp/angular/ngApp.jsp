@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Angular JS Tutorial</title>
-<script type="text/javascript" src="../../js/ext/angular/angular.js"></script>
+<script type="text/javascript" src="../js/ext/angular/angular.js"></script>
 </head>
 
 <body>
@@ -24,20 +24,6 @@
 			Emp City: 
 			<span ng-bind="emp.city"></span>
 		</p>
-		<div ng-init="x=10; y=true">
-			<p ng-if="false">
-				Hello
-			</p>
-			<p ng-if="x<12">
-				Hello Hello
-			</p>
-			<p ng-if="x>12">
-				Hello Bye
-			</p>
-			<p ng-hide="y">
-				Hello Bye
-			</p>
-		</div>
 	</div>
 
 </body>

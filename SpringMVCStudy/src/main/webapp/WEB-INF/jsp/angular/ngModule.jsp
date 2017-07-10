@@ -3,7 +3,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>AngularJS Module and Controller</title>
-<script type="text/javascript" src="../../js/ext/angular/angular.js"></script>
+<script type="text/javascript" src="../js/ext/angular/angular.js"></script>
 
 <script type="text/javascript">
 	//module
@@ -18,20 +18,6 @@
 		r.message2 = "Student";
 		s.student = {id:10, name:"Honey", city:"Memphis"};
 	}]);
-	
-	app.controller("myController3", ["$rootScope", "$scope",  function(r, s) {
-		r.message2 = "Student";
-		s.student = {id:10, name:"Honey", city:"Memphis"};
-		this.student = {id:10, name:"Honey", city:"Memphis"};
-	}]);
-	
-	app.component("greetUser", {
-		template: 'Hello, {{$ctrl.user}}!',
-		controller: function GreetUserController() {
-			this.user = 'world';
-		}
-	});
-	
 </script>
 
 </head>
@@ -66,23 +52,6 @@
 				Emp City: 
 				<span ng-bind="student.city"></span>
 			</p>
-		</div>
-		<div ng-controller="myController3 as c3">
-			<p>
-				Emp id: 
-				<input type="text" ng-model="c3.student.id"/>
-			</p>
-			<p>
-				Emp Name: 
-				<input type="text" ng-model="c3.student.name"/>
-			</p>
-			<p>
-				Emp City: 
-				<span ng-bind="c3.student.city"></span>
-			</p>
-		</div>
-		<div>
-			<greet-user></greet-user>
 		</div>
 	</div>
 </body>
