@@ -91,11 +91,11 @@
 	    <version>1.1.1</version>
 	</dependency>
     <!-- https://mvnrepository.com/artifact/com.oracle/classes12 -->
-	<dependency>
+	<!-- <dependency>
 	    <groupId>com.oracle</groupId>
 	    <artifactId>classes12</artifactId>
 	    <version>10.2.0.2.0</version>
-	</dependency>
+	</dependency> -->
     
     <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-email -->
 	<dependency>
