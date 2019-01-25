@@ -15,7 +15,9 @@
     
     <tx:annotation-driven/>
 
-    <context:property-placeholder location="jdbc.properties"/>
+    <!-- <context:property-placeholder location="jdbc.properties"/> -->
+    
+    <context:property-placeholder location="jdbc.postgres.properties"/>
 
     <bean id="myDataSource" class="org.apache.tomcat.dbcp.dbcp2.BasicDataSource" destroy-method="close">
         <property name="driverClassName" value="${jdbc.driverClassName}"/>
